@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kafka Messages</title>
+</head>
+<body bgcolor="cyan">
+  <h1>Event messages</h1>
+  <ul id="message-list"></ul>
+
+  <script>
+    const messageList = document.getElementById('message-list');
+
+    function fetchMessages() {
+      fetch('/messages')
+        .then(response => response.json())
+        .then(messages => {
+          messageList.innerHTML = ''; // Clear previous messages
+          messages.forEach(message => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${message.timestamp}: ${message.value}`;
+            messageList.appendChild(listItem);
+          });
+        });
+    }
+
+    fetchMessages(); // Initial fetch
+    setInterval(fetchMessages, 2000); // Fetch messages every 2 seconds
+  </script>
+</body>
+</html>
