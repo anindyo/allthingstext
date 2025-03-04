@@ -1,0 +1,24 @@
+{
+  "name": "allthingstext",
+  "version": "1.0.0",
+  "description": "Content parsing, text generation, NLP, and related topics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anindyo/allthingstext.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anindyo/allthingstext/issues"
+  },
+  "homepage": "https://github.com/anindyo/allthingstext#readme",
+  "dependencies": {
+    "fs-extra": "^11.3.0",
+    "recursive-readdir": "^2.2.3",
+    "xml-js": "^1.6.11"
+  }
+}
